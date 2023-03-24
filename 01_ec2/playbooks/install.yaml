@@ -1,0 +1,10 @@
+- name: sample playbook for terraform demo
+  hosts: all
+  tasks:
+  - name: install packages
+    become: yes
+    package:
+      name: apache2
+      state: present
+      update_cache: yes
+      
